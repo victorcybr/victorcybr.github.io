@@ -1,0 +1,644 @@
+---
+permalink: mugen/chars/Sakura.html
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura by VictorCYBR</title>
+  <link href="/css/chars.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+
+<body>
+  <div id="container1">
+    <center><a href="/">Home</a> | <a href="javascript:history.back()">Back</a></center>
+    <hr>
+    <div id="container2">
+      <div id="content">
+
+        <table width="100%">
+          <tr>
+            <td>
+              <div class="title1">Sakura</div>
+              <div class="desc">by VictorCYBR</div>
+            </td>
+            <td align="right">
+              <a href="https://www.mediafire.com/file/l7e5w33csggd8c7/Sakura.zip/file" target="_blank"
+                style="text-decoration: none;">
+                <div class="download"><span>Download<span></div>
+              </a>
+            </td>
+          </tr>
+        </table>
+        <p>Custom version of Sakura Kasugano, for MUGEN 1.0+.<br>
+          Based (mostly) on her Capcom vs SNK 2 appearance.<br>
+          Customizable options, including alternate hitsparks and choosing between Custom Combo or MAX Mode. Check
+          "config.txt" for info.<br>
+          Two modes: Normal and Dark.<br>
+          Many Hyper Portraits and Big Portraits.<br>
+          Special Intro vs <a href="https://network.mugenguild.com/jmorphman/characters/" target="_blank">Jmorphman's
+            Shingo Yabuki</a>.<br>
+          Special Intro vs Yuri, Karin, Dan and Athena.<br>
+          Special Intro vs <a href="/mugen/chars" target="_blank">my Akuma</a> (both Normal and Dark mode).<br>
+          Special Winpose using Shun Goku Satsu and Lv.3 Midare Zakura.</p>
+        <hr>
+        <p class="title2">Index</p>
+        <div class="index">
+          <ul>
+            <li><a href="#modes">Modes</a></li>
+            <li><a href="#palette">Palette Configuration</a></li>
+            <li><a href="#movelist">Move List</a></li>
+            <li><a href="#system">System</a></li>
+            <li><a href="#movedetails">Move Details</a></li>
+            <li><a href="#combosystem">Combo System</a></li>
+            <li><a href="#ccmm">Custom Combo / MAX Mode</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#versionhistory">Version History</a></li>
+            <li><a href="#knownissues">Known Issues</a></li>
+            <li><a href="#specialthanks">Special Thanks</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+          </ul>
+        </div>
+        <hr>
+        <p class="title2" id="modes">Modes</p>
+        <p>This character has two different modes:</p>
+        <big>Normal Sakura</big><br>
+        <ul>
+          <li>Based on her CvS2 appearance, with bits from SFIV and SFV</li>
+          <li>Does normal damage</li>
+          <li>Can perform EX moves</li>
+          <li>Has normal defense</li>
+        </ul>
+        <big>Dark Sakura</big><br>
+        <ul>
+          <li>Based on her versus series appearances (MSHxSF and MvC2)</li>
+          <li>Moves faster and has different properties on special moves</li>
+          <li>Does more damage than Normal Sakura</li>
+          <li>Can not perform EX moves</li>
+          <li>Has lower defense</li>
+        </ul>
+        <span class="note">If controlled by the AI, defense levels have no effect. This means that she has normal
+          defense, much like in official Capcom games.</span>
+        <p>Sakura.def:<br>
+          Both chars in one file. Hold start to choose Dark Sakura (palettes 7 ~ 12).</p>
+        <p>NormalSakura.def:<br>
+          Only Normal Sakura.</p>
+        <p>DarkSakura.def:<br>
+          Only Dark Sakura.</p>
+        <span class="note">By default, only the version that include both chars can transform mid fight, but this can
+          easily be changed in each respective file in the States folder.</span>
+        <hr>
+        <p class="title2" id="palette">Palette Configuration</p>
+
+        <p>To change palettes, you need to open the respective file and edit a few things:<br>
+          Sakura (both modes): States/Sakura.st<br>
+          Normal Sakura only: States/NormalSakura.st<br>
+          Dark Sakura only: States/DarkSakura.st</p>
+
+        <p>You will see a section with the title "Palette Configuration". Var(0) controls what palette Sakura will be
+          using. Inside the "Palettes" folder there are previews for the palettes, with a number on their names. To
+          assign a palette to a button, simply put that number to the button you want.<br>
+          For example, if you want palette 13 for the "b" button, go to:<br><span class="code">[State 5900, Palette 5
+            (b)]</span><br>and change the last line to:<br><span class="code">var(0) = 13</span></p>
+
+        <p>Palettes are organized like this: 1~199: Normal Sakura || 200+ : Dark Sakura<br>
+          If you make new palettes, be sure to add them in the correct number range!</p>
+
+        <hr>
+        <p class="title2" id="movelist">Move List</p>
+        <p>
+          <font class="ex">(EX)</font>: move has an EX version, performed by pressing 2 punch/kick buttons (costs 1/2
+          bar).<br>
+          <font class="max">(MAX)</font>: use 2 punch/kick buttons when performing a Super Move to power it up (costs 2
+          bars).<br>
+          <font class="lv3">(Lv.3)</font>: move costs 3 bars.
+        </p>
+
+        <center>
+          <table class="table">
+            <tr>
+              <td colspan="2" class="titleblue">Normal Sakura</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="normal">
+                <center>Normal</center>
+              </td>
+            </tr>
+            <tr>
+              <td>Sakura Shime</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2P.png"></td>
+            </tr>
+            <tr>
+              <td>Sailor Shoot</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2K.png"></td>
+            </tr>
+            <tr>
+              <td>Flower Kick</td>
+              <td><img src="/assets/fg_icons/F.png"> + <img src="/assets/fg_icons/MK.png"></td>
+            </tr>
+            <tr>
+              <td>Air Throw</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2K.png"> (Air)</td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="special">
+                <center>Special</center>
+              </td>
+            </tr>
+            <tr>
+              <td>Hadoken <font class="ex">(EX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"> + <img src="/assets/fg_icons/P.png"> (hold <img
+                  src="/assets/fg_icons/P.png"> to change effect)</td>
+            </tr>
+            <tr>
+              <td>Tengyo Hadoken <font class="ex">(EX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"> + <img src="/assets/fg_icons/P.png"> (hold <img
+                  src="/assets/fg_icons/P.png"> to change effect)</td>
+            </tr>
+            <tr>
+              <td>Shououken <font class="ex">(EX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/DP.png"> + <img src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Shunpu Kyaku <font class="ex">(EX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"> + <img src="/assets/fg_icons/K.png"> (Air also)</td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Shunpu Renkyaku</td>
+              <td><img src="/assets/fg_icons/QCB.png"> + <img src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>Ouka Kyaku <font class="ex">(EX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"> + <img src="/assets/fg_icons/K.png">(Air)</td>
+            </tr>
+            <tr>
+              <td>Sakura Otoshi <font class="ex">(EX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/DP.png"> + <img src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Punch</td>
+              <td><img src="/assets/fg_icons/P.png"> (up to 3 times)</td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Ouka Kyaku</td>
+              <td><img src="/assets/fg_icons/D.png"> + <img src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Air Throw</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2K.png"></td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Cancel</td>
+              <td><img src="/assets/fg_icons/K.png"></td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="super">
+                <center>Super</center>
+              </td>
+            </tr>
+            <tr>
+              <td>Shinku Hadoken <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/QCF.png"> + <img
+                  src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Shinku Tengyo Hadoken <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"><img src="/assets/fg_icons/QCB.png"> + <img
+                  src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Haru Ichiban <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"><img src="/assets/fg_icons/QCB.png"> + <img
+                  src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>Midare Zakura <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/QCF.png"> + <img
+                  src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>Transform</td>
+              <td><img src="/assets/fg_icons/RDP.png"> + <img src="/assets/fg_icons/S.png"> (enable in "config.txt")
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">Haru Ranman <font class="lv3">(Lv.3)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"><img src="/assets/fg_icons/QCB.png"> + <img
+                  src="/assets/fg_icons/3K.png"> (default command)</td>
+            </tr>
+            <tr>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/HCB.png"> + <img
+                  src="/assets/fg_icons/2K.png"> (alternate command)</td>
+            </tr>
+          </table>
+
+          <br>
+
+          <table class="table">
+            <tr>
+              <td colspan="2" class="titlered">Dark Sakura</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="normal">
+                <center>Normal</center>
+              </td>
+            </tr>
+            <tr>
+              <td>Sakura Shime</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2P.png"></td>
+            </tr>
+            <tr>
+              <td>Sailor Shoot</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2K.png"></td>
+            </tr>
+            <tr>
+              <td>Flower Kick</td>
+              <td><img src="/assets/fg_icons/F.png"> + <img src="/assets/fg_icons/MK.png"></td>
+            </tr>
+            <tr>
+              <td>Air Throw</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2K.png"> (Air)</td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="special">
+                <center>Special</center>
+              </td>
+            </tr>
+            <tr>
+              <td>Hadoken</td>
+              <td><img src="/assets/fg_icons/QCF.png"> + <img src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Air Hadoken</td>
+              <td><img src="/assets/fg_icons/QCF.png"> + <img src="/assets/fg_icons/P.png"> (Air)</td>
+            </tr>
+            <tr>
+              <td>Tengyo Hadoken</td>
+              <td><img src="/assets/fg_icons/QCB.png"> + <img src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Shououken</td>
+              <td><img src="/assets/fg_icons/DP.png"> + <img src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Shunpu Kyaku</td>
+              <td><img src="/assets/fg_icons/QCB.png"> + <img src="/assets/fg_icons/K.png"> (Air also)</td>
+            </tr>
+            <tr>
+              <td>Ouka Kyaku</td>
+              <td><img src="/assets/fg_icons/QCF.png"> + <img src="/assets/fg_icons/K.png">(Air)</td>
+            </tr>
+            <tr>
+              <td>Sakura Otoshi</td>
+              <td><img src="/assets/fg_icons/DP.png"> + <img src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Punch</td>
+              <td><img src="/assets/fg_icons/P.png"> (up to 3 times)</td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Ouka Kyaku</td>
+              <td><img src="/assets/fg_icons/D.png"> + <img src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Air Throw</td>
+              <td><img src="/assets/fg_icons/B.png"> or <img src="/assets/fg_icons/F.png"> + <img
+                  src="/assets/fg_icons/2K.png"></td>
+            </tr>
+            <tr>
+              <td>&emsp;└ Cancel</td>
+              <td><img src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>Ashura Senku</td>
+              <td><img src="/assets/fg_icons/RDP.png"> or <img src="/assets/fg_icons/DP.png"> + <img
+                  src="/assets/fg_icons/2P.png"> or <img src="/assets/fg_icons/2K.png"></td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="super">
+                <center>Super</center>
+              </td>
+            </tr>
+            <tr>
+              <td>Shinku Hadoken <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/QCF.png"> + <img
+                  src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Shinku Tengyo Hadoken <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"><img src="/assets/fg_icons/QCB.png"> + <img
+                  src="/assets/fg_icons/P.png"></td>
+            </tr>
+            <tr>
+              <td>Haru Issen <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCB.png"><img src="/assets/fg_icons/QCB.png"> + <img
+                  src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>Midare Zakura <font class="max">(MAX)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/QCF.png"> + <img
+                  src="/assets/fg_icons/K.png"></td>
+            </tr>
+            <tr>
+              <td>Transform</td>
+              <td><img src="/assets/fg_icons/RDP.png"> + <img src="/assets/fg_icons/S.png"> (enable in "config.txt")
+              </td>
+            </tr>
+            <tr>
+              <td>Shun Goku Satsu <font class="lv3">(Lv.3)</font>
+              </td>
+              <td><img src="/assets/fg_icons/LP.png"><img src="/assets/fg_icons/LP.png"><img
+                  src="/assets/fg_icons/F.png"><img src="/assets/fg_icons/LK.png"><img src="/assets/fg_icons/HP.png">
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">Midare Zakura <font class="lv3">(Lv.3)</font>
+              </td>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/QCF.png"> + <img
+                  src="/assets/fg_icons/3K.png"> (default command)</td>
+            </tr>
+            <tr>
+              <td><img src="/assets/fg_icons/QCF.png"><img src="/assets/fg_icons/HCB.png"> + <img
+                  src="/assets/fg_icons/2K.png"> (alternate command)</td>
+            </tr>
+          </table>
+        </center>
+
+        <hr>
+        <p class="title2" id="system">System</p>
+
+        <center>
+          <table class="table">
+            <tr>
+              <td>Forward Dash</td>
+              <td><img src="/assets/fg_icons/F.png"><img src="/assets/fg_icons/F.png"></td>
+            </tr>
+            <tr>
+              <td>Run</td>
+              <td><img src="/assets/fg_icons/F.png"><img src="/assets/fg_icons/F.png"> (hold <img
+                  src="/assets/fg_icons/F.png">)</td>
+            </tr>
+            <tr>
+              <td>Backward Dash</td>
+              <td><img src="/assets/fg_icons/B.png"><img src="/assets/fg_icons/B.png"></td>
+            </tr>
+            <tr>
+              <td>Low Jump</td>
+              <td>tap <img src="/assets/fg_icons/U.png"></td>
+            </tr>
+            <tr>
+              <td>High Jump</td>
+              <td>tap <img src="/assets/fg_icons/D.png"><img src="/assets/fg_icons/U.png"></td>
+            </tr>
+            <tr>
+              <td>Long Low Jump</td>
+              <td>tap <img src="/assets/fg_icons/D.png"> tap <img src="/assets/fg_icons/U.png"></td>
+            </tr>
+            <tr>
+              <td>Dodge</td>
+              <td><img src="/assets/fg_icons/LP.png"> + <img src="/assets/fg_icons/LK.png"></td>
+            </tr>
+            <tr>
+              <td>Dodge Attack</td>
+              <td><img src="/assets/fg_icons/P.png"> or <img src="/assets/fg_icons/K.png"> (during dodge)</td>
+            </tr>
+            <tr>
+              <td>Forward Roll</td>
+              <td><img src="/assets/fg_icons/F.png"> + <img src="/assets/fg_icons/LP.png"> + <img
+                  src="/assets/fg_icons/LK.png"></td>
+            </tr>
+            <tr>
+              <td>Backward Roll</td>
+              <td><img src="/assets/fg_icons/B.png"> + <img src="/assets/fg_icons/LP.png"> + <img
+                  src="/assets/fg_icons/LK.png"></td>
+            </tr>
+            <tr>
+              <td>Parry</td>
+              <td>tap <img src="/assets/fg_icons/F.png"></td>
+            </tr>
+            <tr>
+              <td>Parry Low</td>
+              <td>tap <img src="/assets/fg_icons/D.png"></td>
+            </tr>
+            <tr>
+              <td>Air Parry</td>
+              <td>tap <img src="/assets/fg_icons/F.png"> (Air)</td>
+            </tr>
+            <tr>
+              <td>Power Charge</td>
+              <td>hold <img src="/assets/fg_icons/MP.png"> + <img src="/assets/fg_icons/MK.png"></td>
+            </tr>
+            <tr>
+              <td>Zero Counter</td>
+              <td><img src="/assets/fg_icons/BD.png"> + <img src="/assets/fg_icons/P.png"> or <img
+                  src="/assets/fg_icons/K.png"> (during guard)</td>
+            </tr>
+            <tr>
+              <td>Custom Combo</td>
+              <td><img src="/assets/fg_icons/HP.png"> + <img src="/assets/fg_icons/HK.png"> (Air also)</td>
+            </tr>
+            <tr>
+              <td>MAX Mode</td>
+              <td><img src="/assets/fg_icons/HP.png"> + <img src="/assets/fg_icons/HK.png"></td>
+            </tr>
+            <tr>
+              <td>Fall Recovery</td>
+              <td><img src="/assets/fg_icons/2P.png"> or <img src="/assets/fg_icons/LP.png"> + <img
+                  src="/assets/fg_icons/LK.png"></td>
+            </tr>
+          </table>
+        </center>
+
+        <hr>
+        <p class="title2" id="movedetails">Move Details</p>
+        <ul>
+          <li>Flower Kick is an overhead.</li>
+          <li>Hadoken will launch the opponent if charged (Normal Sakura) or used in a short distance (Dark Sakura).
+          </li>
+          <li>EX Ouka Kyaku can OTG (hit lying down opponents).</li>
+        </ul>
+        <hr>
+        <p class="title2" id="combosystem">Combo System</p>
+        <ul>
+          <li>Some <font class="normal">Normal</font> attacks can be canceled into Command <font class="normal">Normal
+            </font>, <font class="special">Special</font> and <font class="super">Super</font> moves.</li>
+          <li>Some <font class="special">Special</font> moves can be canceled into <font class="super">Super</font>
+            moves.</li>
+          <li>Some Lv1 <font class="super">Super</font> moves can be canceled into <font class="max">MAX Super</font>
+            moves.</li>
+          <li>Cancelling a <font class="special">Special</font>, <font class="super">Super</font> move or Custom Combo
+            into a <font class="super">Super</font> move resets the juggle points but also reduces its damage.</li>
+        </ul>
+        <hr>
+        <p class="title2" id="ccmm">Custom Combo</p>
+        <ul>
+          <li>Removes cancellable attack restrictions and gives you a lot of freedom to combo them.</li>
+          <li>Juggle limite is lifted.</li>
+          <li>You can only use <font class="ex">EX Special</font> or <font class="super">Super</font> moves from the
+            point the character starts flashing faster and brighter, and doing so ends Custom Combo.</li>
+          <li>Gives you a short invulnerability window at the start.</li>
+        </ul>
+        <p class="title2">MAX Mode</p>
+        <ul>
+          <li>Attack and Defense are increased while in MAX Mode.</li>
+          <li>
+            <font class="ex">EX</font> moves can be performed at no power cost, though take away from time sustained in
+            MAX mode.
+          </li>
+          <li>All Lv1 <font class="super">Supers</font> can be performed at no power cost, though immediately uses up
+            all time in MAX mode.</li>
+          <li>All Lv2 and higher <font class="super">Supers</font> will cost 1 power bar, along with using up all time
+            in MAX mode.</li>
+          <li>Even without a power bar, as long as you have time left in MAX mode, you can perform Lv1 <font
+              class="super">Supers</font>/<font class="ex">EX</font> moves.</li>
+          <li>You can not Power Charge/gain power while in MAX mode.</li>
+          <li>You can not perform a Zero Counter/Counter Movement while in MAX Mode.</li>
+        </ul>
+        <hr>
+        <p class="title2" id="screenshots">Screenshots</p>
+        <p>TBA...</p>
+        <hr>
+        <p class="title2" id="versionhistory">Version History</p>
+        <p><a href="javascript:void(0)" onclick="myFunction()">Click to show/hide</a></p>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("spoiler");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "block";
+            }
+          }
+        </script>
+
+        <div id="spoiler">
+          <big>12/April/2023</big>
+          <ul>
+            <li>Fixed palette error during intro with Akuma</li>
+            <li>Fixed mispelling in the code that made Sakura able to cancel lv1 Shinkuu Hadouken into any lv1 super
+            </li>
+            <li>Fixed Max Mode bar disappearing late in some lv3 supers</li>
+            <li>Fixed a few issues that were not noticiable (?) during transformation</li>
+            <li>Added cancel from specials to transformation</li>
+          </ul>
+
+          <big>10/April/2023</big>
+          <ul>
+            <li>Fixed medium spark scale</li>
+            <li>Fixed Hadoushou behavior</li>
+            <li>A few aesthetics tweaks here and there</li>
+            <li>Fixed Hadouken not playing sound when hitting another projectile</li>
+            <li>Fixed Sakura not keeping the mode (if changed) between rounds</li>
+            <li>Changed to 1.0 sprites and added RemapPal to transformations</li>
+            <li>Dark Sakura medium hadouken now have the same range as the other variants</li>
+            <li>Fixed not being able to super cancel from Tengyou Hadouken</li>
+            <li>Fixed EX Tengyou Hadouken angle during hitpause</li>
+            <li>Fixed projectile flag in Hadoushou</li>
+            <li>Added Cheap K.O. SFA voice</li>
+            <li>Fixed Custom Combo finish not appearing when using some projectiles</li>
+            <li>Extended Shinkuu Hadouken range for Dark Sakura</li>
+            <li>Added special intro (both modes) vs Akuma</li>
+            <li>Added more palettes</li>
+            <li>Added alternate commands for Lv3 Supers</li>
+            <li>Extended time for Sakura Shime to be more accurate to CvS2</li>
+            <li>Added Winpose for Haru Ranman and Midare Zakura (Lv3)</li>
+          </ul>
+
+          <big>31/March/2023</big>
+          <ul>
+            <li>Official release</li>
+          </ul>
+
+          <big>11/August/2022</big>
+          <ul>
+            <li>Alpha Released</li>
+          </ul>
+
+        </div>
+
+        <hr>
+        <p class="title2" id="knownissues">Known Issues</p>
+        <ul>
+          <li>If timed correctly, Sakura can do an infinite combo involving Shunpuu Kyaku in the corner. It's very hard
+            to do consistently though. Will fix when possible.</li>
+        </ul>
+
+        <hr>
+        <p class="title2" id="specialthanks">Special Thanks</p>
+        <ul>
+          <li>Everyone from MugenGuild and MFFA, always helping and treating me super nice.</li>
+          <li>PotS, for the style, assets and code help</li>
+          <li>Jmorphman and JustNoPoint for the Explodsive Buffering System</li>
+          <li>Jmorphman and DivineWolf, for reference I used to make my template</li>
+          <li>Jmorphman and KarmaCharmeleon for teaching me how to use the CheatEngine tables</li>
+          <li>Jesuszilla for the CheatEngine tables</li>
+          <li>Insanius for CvS2 sprites with axis</li>
+          <li>AlexSin and Momotaro for custom sprites for Haru Ranman</li>
+          <li>RaZorbakk36 for helping color separating some sprites</li>
+          <li>Warusaki3 for reference on coding and some sounds that I borrowed</li>
+          <li>Drex for SFA3 sounds / The Sound Resources for MvC2 sounds</li>
+          <li>Many people (can't remember everyone, sorry), for the Color Separation</li>
+          <li>Cyanide, JustNoPoint, 2OS, and many other people for helping with code</li>
+          <li>Trololo, Foobs, Lurker for some sick pals</li>
+          <li>DauntlessMonk7 for recording footage from SF4 for me</li>
+          <li>.JSON, Foobs, RagingRowen, ZolidSone and other people for testing and feedback</li>
+          <li>TheFightersGeneration for artworks I used for the portraits</li>
+          <li>streetfighter.fandom.com for artworks, victory quotes and many other useful stuff</li>
+          <li>Many artists for artwork I used for the Lv3 portraits:</li>
+          <ul>
+            <li><a href="https://twitter.com/kandoken" target="_blank">Kandoken</a></li>
+            <li><a href="https://twitter.com/akisu_K" target="_blank">Akisu</a></li>
+            <li><a href="https://www.pixiv.net/en/users/707480" target="_blank">JC</a></li>
+            <li><a href="https://www.artstation.com/loped" target="_blank">Sangheon Nam</a></li>
+          </ul>
+          <li>wiki.supercombo.gg, for the icons in the move list</li>
+          <li>Everyone at MFG, for feedback, testing and suggestions</li>
+          <li>Elecbyte, for creating MUGEN</li>
+          <li>VirtuallTek, for creating Fighter Factory</li>
+          <li>Capcom, for creating Sakura</li>
+          <li>You, for downloading my char :D</li>
+        </ul>
+
+        <hr>
+        <p class="title2" id="disclaimer">Disclaimer</p>
+        <p>Street Fighter, Capcom Fighting Jam and Capcom VS SNK 2 are property of Capcom.<br>
+          This MUGEN character is a non-profit fan work, it cannot be used for any commercial purposes.</p>
+      </div>
+    </div>
+  </div>
+
+  <img class="render" src="/assets/chars/sakura/render.png">
+
+</body>
+
+</html>

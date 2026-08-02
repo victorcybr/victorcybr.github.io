@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem('site-theme');
+        if (savedTheme) {
+          document.documentElement.classList.add(savedTheme);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/themes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Layout principal -->
+      <div class="layout">
+        <!-- Cabeçalho -->
+        <header class="site-header">
+          <a href="/"><img src="/assets/logo.png" /></a>
+        </header>
+
+        <!-- Barra lateral esquerda -->
+        <aside class="sidebar left">
+          <nav class="box">
+            <ul class="nav-list">
+              <li><a href="/">Index</a></li>
+              <li><a href="/mugen">M.U.G.E.N</a></li>
+              <li><a href="/myart">My Art</a></li>
+              <li><a href="/mymusic">My Music</a></li>
+              <li><a href="/guestbook">Guestbook</a></li>
+              <li><a href="/links">Links</a></li>
+              <li><a href="/aboutme">About Me</a></li>
+              <li><a href="https://ko-fi.com/victorcybr">Ko-Fi</a></li>
+            </ul>
+          </nav>
+
+          <section class="box center">
+            Hit Counter:<br />
+            <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89514790"></script>
+            <noscript><img src="//counter1.fc2.com/counter_img.php?id=89514790"/></noscript><br />
+            Online Now:<br />
+            <script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=89514790"></script>
+            <noscript><img src="//counter1.fc2.com/counter_now.php?id=89514790"/></noscript>
+          </section>
+
+          <section class="box center">
+            <h4>Select Skin</h4>
+            <hr>
+            <select id="site-theme">
+              <option value="">Default</option>
+              <option value="vapor-l">Vaporwave Light</option>
+              <option value="vapor-d">Vaporwave Dark</option>
+              <option value="aero">Aero</option>
+              <option value="miku">Hatsune Miku</option>
+              <option value="cyber">Cyberpunk</option>
+              <option value="cyber2">Cyberpunk 2</option>
+              <option value="rpg">RPG</option>
+            </select>
+          </section>
+        </aside>
+
+        <!-- Conteúdo central -->
+        {{ content }}
+
+        <!-- Barra lateral direita -->
+        <aside class="sidebar right">
+          <section class="box center">
+            <h4>Status</h4>
+            <hr>
+            <div class="status">
+              <p><a href="/">VictorCYBR</a> • <span class="timeago" data-date="2026-04-01"></span></p>
+              <p>Currently OBSESSED with Cyberpunk 2077...</p>
+
+              <script>
+              function updateTimeAgo() {
+                document.querySelectorAll(".timeago").forEach(el => {
+                  const date = new Date(el.dataset.date);
+                  const now = new Date();
+                  const diff = Math.floor((now - date) / 1000);
+
+                  const days = Math.floor(diff / 86400);
+                  if (days > 0) {
+                    el.textContent = days + " day" + (days > 1 ? "s" : "") + " ago";
+                  } else {
+                    el.textContent = "today";
+                  }
+                });
+              }
+              updateTimeAgo();
+              </script>
+            </div>
+          </section>
+
+          <section class="box center" id="link-me">
+            <h4>Link Me</h4>
+            <hr />
+            <img src="/assets/buttons/victorcybr.gif" alt="VictorCYBR" title="VictorCYBR"/>
+            <textarea readonly onclick="this.select()">
+<a href="https://victorcybr.github.io/" target="_blank"><img src="https://victorcybr.github.io/assets/buttons/victorcybr.gif" alt="VictorCYBR" title="VictorCYBR"/></a></textarea>
+          </section>
+
+          <section class="box center">
+            <h4>Cool Sites</h4>
+            <hr />
+            <div class="sites-container">
+              <a href="https://neocities.org" target="_blank"><img src="/assets/buttons/neocitiesorg.gif" alt="NeoCities" title="NeoCities"/></a>
+              <a href="https://nekoweb.org" target="_blank"><img src="https://nekoweb.org/assets/buttons/button11.gif" alt="nekoweb" title="nekoweb"/></a>
+              <a href="https://atabook.org" target="_blank"><img src="/assets/buttons/atabook.gif" alt="Atabook" title="Atabook"/></a>
+              <a href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe" title="Status Cafe"/></a>
+              <a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif" alt="petrapixel" title="petrapixel"/></a>
+              <a href="https://mugenguild.com" target="_blank"><img src="/assets/buttons/mfg.gif" alt="The Mugen Fighters Guild" title="The Mugen Fighters Guild"/></a>
+            </div>
+          </section>
+        </aside>
+
+        <!-- Rodapé -->
+        <footer class="site-footer">
+          Made with ❤️ and pixels, by VictorCYBR & Violet<br />
+          VictorCYBR © 2014~2026
+        </footer>
+      </div>
+    </div>
+
+    <!-- Pet (Anime png) -->
+    <img class="pet" id="pet-image" src="" />
+
+    <!-- VHS Clock -->
+    <div id="vhs-clock"></div>
+
+    <!-- Scripts -->
+    <script src="/js/random-pet.js"></script>
+    <script src="/js/myart.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/theme-changer.js"></script>
+    <script src="/js/vhs-clock.js"></script>
+  </body>
+</html>

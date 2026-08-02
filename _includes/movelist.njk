@@ -1,0 +1,38 @@
+{% set lastType = "" %}
+<table class="table">
+  {% for move in movelist %}
+    
+    {# Se o tipo do golpe atual for diferente do anterior, cria uma linha de título #}
+    {% if move.type != lastType %}
+      {% set lastType = move.type %}
+      <tr>
+        <td colspan="3" class="{{ move.type | lower }}">
+          {{ move.type }}
+        </td>
+      </tr>
+    {% endif %}
+
+    {# Linha do golpe #}
+    <tr>
+      <td>
+        {{ move.name }} 
+        {% if move.tag %}<span class="{{ move.tag }}">({{ move.tag | upper }})</span>{% endif %}
+      </td>
+      <td>
+        {% for item in move.input %}
+          {% if item[0] == "/" %}
+            {# Se o primeiro caractere for "/", removemos ele e mostramos o resto como texto #}
+            {{ item | replace("/", "", 1) | safe }}
+          {% else %}
+            {# Se não tiver a barra, renderizamos a imagem do ícone #}
+            <img src="/assets/fg_icons/{{ item }}.png" alt="{{ item }}">
+          {% endif %}
+        {% endfor %}
+      </td>
+      <td>
+        {{ move.note }}
+      </td>
+    </tr>
+
+  {% endfor %}
+</table>

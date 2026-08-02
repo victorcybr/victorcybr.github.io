@@ -1,0 +1,182 @@
+/* ============================== */
+/* TEMA DARK FIRE
+/* ============================== */
+body.dark-fire {
+  --body-color1: #444;
+  --body-color2: #222;
+  --bg-image: linear-gradient(to right, var(--body-color2), var(--body-color1), var(--body-color2));
+  --text-color: white;
+  --screen-bg-color: #000;
+  --screen-text-color: #f90;
+  --screen-text-active: #000;
+  --screen-text-glow: hsl(12, 100%, 40%);
+  --screen-text-glow-alpha: #f304;
+  --3d-white: #fff3;
+  --3d-black: #0006;
+  --slider-bg: linear-gradient(to bottom, #000, #0006);
+  --seeker-fill: linear-gradient(to bottom, var(--screen-text-color), var(--screen-text-glow));
+}
+
+/* ============================== */
+/* TEMA NEON PURPLE
+/* ============================== */
+body.neon-purple {
+  --body-color1: #448;
+  --body-color2: #224;
+  --bg-image: linear-gradient(to right, var(--body-color2), var(--body-color1), var(--body-color2));
+  --text-color: white;
+  --screen-bg-color: #000;
+  --screen-text-color: #c6f;
+  --screen-text-active: #000;
+  --screen-text-glow: #30f;
+  --screen-text-glow-alpha: #30f6;
+  --3d-white: #fff3;
+  --3d-black: #0006;
+  --slider-bg: linear-gradient(to bottom, #000, #0006);
+  --seeker-fill: linear-gradient(to bottom, var(--screen-text-color), var(--screen-text-glow));
+}
+
+/* ============================== */
+/* TEMA SAKURA
+/* ============================== */
+body.sakura {
+  --body-color1: hsl(345, 100%, 90%);
+  --body-color2: hsl(345, 100%, 80%);
+  --bg-image: linear-gradient(to right, var(--body-color2), var(--body-color1), var(--body-color2));
+  --text-color: hsl(345, 100%, 40%);
+  --screen-bg-color: linear-gradient(to right bottom, hsl(345, 100%, 95%), hsl(345, 100%, 95%));
+  --screen-text-color: hsl(345, 100%, 40%);
+  --screen-text-active: hsl(345, 100%, 90%);
+  --screen-text-glow: hsla(345, 100%, 40%, 0);
+  --screen-text-glow-alpha: hsla(345, 100%, 50%, 0.1);
+  --3d-white: #fff9;
+  --3d-black: #0004;
+  --slider-bg: linear-gradient(to bottom, hsla(345, 50%, 30%), hsla(345, 50%, 50%));
+  --seeker-fill: linear-gradient(to bottom, hsl(345, 100%, 80%), hsl(345, 100%, 50%));
+}
+
+/* ============================== */
+/* TEMA HATSUNE MIKU
+/* ============================== */
+body.miku {
+  --body-color1: hsla(200, 100%, 30%, 1);
+  --body-color2: hsla(210, 100%, 20%, 1);
+  --bg-image: linear-gradient(to right, var(--body-color2), var(--body-color1), var(--body-color2));
+  --text-color: hsl(330, 100%, 100%);
+  --screen-bg-color: linear-gradient(#000, hsl(215, 100%, 10%));
+  --screen-text-color: hsl(180, 100%, 50%);
+  --screen-text-active: hsl(0, 0%, 0%);
+  --screen-text-glow: hsl(210, 100%, 50%);
+  --screen-text-glow-alpha: hsla(210, 100%, 30%, 0.5);
+  --3d-white: #fff4;
+  --3d-black: #0006;
+  --slider-bg: linear-gradient(to bottom, hsla(200, 25%, 0%, 0.9), hsla(200, 25%, 20%, 0.9));
+  --seeker-fill: linear-gradient(to bottom, hsl(180, 100%, 60%), hsl(220, 100%, 40%));
+}
+
+body.miku button,
+body.miku .slider::-moz-range-thumb,
+body.miku .slider::-webkit-slider-thumb {
+  background:
+    linear-gradient(
+      to bottom,
+      hsl(195, 100%, 35%) 0%,
+      hsl(200, 100%, 30%) 49%,
+      hsl(205, 100%, 25%) 51%,
+      hsl(210, 100%, 20%) 100%
+    );
+}
+
+body.miku button,
+body.miku .title {
+  text-shadow:
+    hsla(180, 100%, 50%, 0) 0 0 5px;
+}
+
+body.miku .visualizer {
+  background:
+    linear-gradient(rgba(0,0,0,0.5), hsla(210,100%,0%,0.5)),
+    url('../themes/miku/miku-visualizer.png');
+  background-size: 150% auto;
+  background-position: center;
+}
+
+body.miku .display1 {
+  color: hsl(345, 100%, 70%);
+  text-shadow: hsl(330, 100%, 50%) 0 0 5px, hsl(330, 100%, 50%) 0 0 5px;
+}
+
+body.miku .seeker-fill {
+  box-shadow: hsl(210, 100%, 50%) 0 0 10px;   
+}
+
+body.miku .playlist-item.active {
+  background: hsl(190, 100%, 60%);
+}
+
+/* ============================== */
+/* TEMA NIGHT WAVE
+/* ============================== */
+body.night-wave {
+  --body-color1: hsl(280, 50%, 30%);
+  --body-color2: hsl(270, 50%, 20%);
+  --bg-image: linear-gradient(to right, var(--body-color2), var(--body-color1), var(--body-color2));
+  --text-color: white;
+  --screen-bg-color: black;
+  --screen-text-color: hsl(330, 100%, 60%);
+  --screen-text-active: black;
+  --screen-text-glow: hsl(330, 100%, 50%);
+  --screen-text-glow-alpha: hsla(330, 100%, 50%, 0.2);
+  --3d-white: #fff4;
+  --3d-black: #0004;
+  --slider-bg: linear-gradient(to bottom, #000, #0006);
+  --seeker-fill: linear-gradient(to bottom, hsl(330, 100%, 75%), hsl(330, 100%, 50%), hsl(330, 100%, 25%));
+}
+
+body.night-wave .display,
+body.night-wave .playlist,
+body.night-wave select,
+body.night-wave option {
+  text-shadow:
+    hsl(330, 100%, 50%) 0 0 5px,
+    hsl(330, 100%, 50%) 0 0 10px;
+}
+
+body.night-wave .seeker-fill {
+  box-shadow: hsl(330, 100%, 50%) 0 0 10px;
+}
+
+/* ============================== */
+/* TEMA OLDSCHOOL
+/* ============================== */
+body.oldschool {
+  --body-color1: hsl(210, 10%, 80%);
+  --body-color2: hsl(210, 10%, 70%);
+  --bg-image: linear-gradient(to right, var(--body-color2), var(--body-color1), var(--body-color2));
+  --text-color: #000;
+  --screen-bg-color: hsl(60, 10%, 65%);
+  --screen-text-color: #000;
+  --screen-text-active: #000;
+  --screen-text-glow: #0000;
+  --screen-text-glow-alpha: #0000;
+  --3d-white: #fff9;
+  --3d-black: #0006;
+  --slider-bg: linear-gradient(to bottom, #000, #0006);
+  --seeker-fill: #0c0;
+}
+
+body.oldschool .playlist-item.active {
+  background: transparent;
+}
+
+body.oldschool .display,
+body.oldschool .playlist,
+body.oldschool .playlist-item.active {
+  text-shadow: #0004 1px 1px 1px;
+}
+
+body.oldschool .display,
+body.oldschool .playlist,
+body.oldschool .visualizer {
+  box-shadow: #0004 1px 1px 1px inset;
+}

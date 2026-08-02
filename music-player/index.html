@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VictorCYBR's Music Player</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/ico" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/themes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bruno+Ace">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">VICTORCYBR'S MUSIC PLAYER</div>
+      <div class="inset" style="margin: 5px 0;"></div>
+      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 2px; max-height: 160px">
+        <div style="display: grid; grid-template-rows: min-content min-content; gap: 2px;">
+          <div class="inset" style="border-radius: 5px; height: fit-content;">
+            <div class="display">
+              <div class="marquee-wrapper">
+                <div id="now-playing">
+                  <span id="artist"></span> - <span id="track"></span>.mp3
+                </div>
+              </div>
+              <div class="status-row">
+                <span id="status">Loading</span> -
+                <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="inset" style="border-radius: 5px; display: flex;">
+            <button id="viz-prev">◀</button>
+              <div class="visualizer">
+                <canvas id="visualizer-canvas"></canvas>
+              </div>
+            <button id="viz-next">▶</button>
+          </div>
+        </div>
+        <div class="inset" style="border-radius: 5px;">
+          <div class="playlist" id="playlist"></div>
+        </div>
+      </div>
+      <div class="seeker-wrap">
+        <div class="inset" style="border-radius: 10px; border-width: 1px; overflow: visible; width: 100%;">
+          <div class="seeker">
+            <div class="seeker-fill"></div>
+          </div>
+        </div> 
+        <div class="seeker-thumb"></div>
+      </div>
+      <div class="controls-grid">
+        <div style="display: flex;">
+          <button class="main-button" id="prev"><i class="fa-solid fa-backward-fast"></i></button>
+          <button class="main-button" id="playpause"><i class="fa-solid fa-play"></i></button>
+          <button class="main-button" id="stop"><i class="fa-solid fa-stop"></i></button>
+          <button class="main-button" id="next"><i class="fa-solid fa-forward-fast"></i></button>
+        </div>
+        <button id="shuffle"><i class="fa-solid fa-shuffle"></i> Shuffle</button>
+        <button class="mute"><i class="fa-solid fa-volume-xmark"></i></button>
+        <input type="range" id="volume" class="slider" min="0" max="1" step="0.05" value="1">
+        <div class="inset" style="border-radius: 0px;">
+          <div class="select-wrap">
+            <select id="theme">
+              <option value="">Default Blue</option>
+              <option value="dark-fire">Dark Fire</option>
+              <option value="neon-purple">Neon Purple</option>
+              <option value="sakura">Sakura</option>
+              <option value="miku">Hatsune Miku</option>
+              <option value="night-wave">Night Wave</option>
+              <option value="oldschool">Oldschool</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="audio"></audio>
+
+    <script src="js/player.js"></script>
+    <script src="js/visualizer.js"></script>
+
+    <script src="js/visualizers/bars.js"></script>
+    <script src="js/visualizers/waveform.js"></script>
+
+  </body>
+</html>

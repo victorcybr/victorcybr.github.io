@@ -1,0 +1,263 @@
+:root {
+  --bg-color: #111;
+  --bg-image: none;
+  --bg-size: cover;
+  --bg-pos: center;
+  --bg-repeat: no-repeat;
+  --bg-opacity: 0;
+  --text-color: #ddd;
+  --accent-color: #3399ff;
+  --accent-color-2: #99ccff;
+  --font-family: Verdana;
+  --font-size: 11pt;
+  --div-border: solid 1px #000;
+  --div-bg: #3338;
+  --div-shadow: none;
+  --div-corner: 0px;
+  --div-padding: 10px;
+  --div-margin: 10px;
+  --inner-bg: rgba(255,255,255,0.1);
+  --table-border: #666;
+  --transition-time: 0.3s;
+  --link-glow: var(--accent-color) 0 0 5px;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-size: var(--bg-size);
+  background-attachment: fixed;
+  background-position: var(--bg-pos);
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--accent-color);
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--accent-color-2);
+  transition: 0.3s ease-in-out;
+}
+
+hr {
+  color: transparent;
+  border: 0;
+  border-top: var(--div-border);
+  height: 1px;
+}
+
+#container1 {
+  text-align: center;
+}
+
+#container2 {
+  text-align: initial;
+  display: inline-block;
+}
+
+#content {
+  max-width: 800px;
+  padding: 3px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.title1 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.title2 {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 75%;
+}
+
+ul {
+  list-style-position: inside;
+  padding: 5px;
+  margin: 5px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td {
+  background: var(--div-bg);
+  border: solid black 1px;
+  padding: 0 10px;
+  height: 25px;
+  width: 50%;
+}
+
+.table img {
+  vertical-align: middle;
+}
+
+.titleblue {
+  background: rgba(0, 64, 128, 0.5) !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.titlered {
+  background: rgba(128, 0, 32, 0.5) !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.normal {
+  color: #FC6;
+  font-weight: bold;
+}
+
+.special {
+  color: #6CF;
+  font-weight: bold;
+}
+
+.super {
+  color: #C6F;
+  font-weight: bold;
+}
+
+.ex {
+  color: #FF0;
+  font-weight: bold;
+}
+
+.max {
+  color: #F0F;
+  font-weight: bold;
+}
+
+.lv3 {
+  color: #F00;
+  font-weight: bold;
+}
+
+.render {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -999999;
+  height: 150%;
+  opacity: 0.25;
+}
+
+#spoiler {
+  display: none;
+  padding: 10px;
+  border: var(--div-border);
+  max-height: 480px;
+  overflow: auto;
+}
+
+.index {
+  display: inline-block;
+  border: var(--div-border);
+  background-color: var(--div-bg);
+}
+
+.code {
+  font-family: monospace;
+  border: dashed 2px rgba(255,255,255,0.25);
+  background-color: var(--div-bg);
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+.note {
+  padding: 15px;
+  border: var(--div-border);
+  background-color: var(--div-bg);
+  border-radius: 10px;
+  margin: 10px 0;
+  line-height: 150%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.note::before {
+  content: "i";
+  float: left;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background: #36f;
+  color: #fff;
+  font-family: times;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.download {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  color: #fff;
+  text-shadow: #0008 2px 2px 2px;
+  background-color: #025;
+  box-shadow: #cffc 0 0 5px inset;
+  border: solid 1px #000;
+  border-radius: 6px;
+  font-family: Verdana;
+  font-size: 11pt;
+  cursor: pointer;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.3s;
+  animation: rainbow 10s infinite linear;
+}
+
+.download::before {
+  content: "";
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  background-color: #0bf;
+  bottom: -50%;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.download::after {
+  content: "";
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  background: linear-gradient(to bottom, #fffc, #fff4);
+  top: -40%;
+  border-radius: 50%;
+  box-shadow: #fff4 0 0 10px 3px;
+}
+
+.download:hover {
+  box-shadow: #cffc 0 0 5px inset, #0af8 0 0 20px;
+}
+
+.download span {
+  z-index:2;
+}
+
+@keyframes rainbow {
+  0% {filter: hue-rotate(0deg);}
+  100% {filter: hue-rotate(360deg);}
+}

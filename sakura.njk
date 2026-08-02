@@ -1,0 +1,115 @@
+---
+layout: wiki.html
+permalink: sakura.html
+char_name: Sakura Kasugano
+movelist:
+  - name: "Sakura Shime"
+    type: "Normal"
+    input: ["B", "/or", "F", "/+", "2P"]
+
+  - name: "Sailor Shoot"
+    type: "Normal"
+    input: ["B", "/or", "F", "/+", "2K"]
+
+  - name: "Flower Kick"
+    type: "Normal"
+    input: ["F", "/+", "MK"]
+
+  - name: "Air Throw"
+    type: "Normal"
+    input: ["B", "/or", "F", "/+", "2K", "/(in air)"]
+
+
+  - name: "Hadouken"
+    type: "Special"
+    input: ["QCF", "/+", "P"]
+    tag: "ex"
+    note: Hold [P] to change effect.
+
+  - name: "Tengyo Hadouken"
+    type: "Special"
+    input: ["QCB", "/+", "P"]
+    tag: "ex"
+    note: Hold [P] to change effect.
+
+  - name: "Shououken"
+    type: "Special"
+    input: ["DP", "/+", "P"]
+    tag: "ex"
+
+  - name: "Shunpu Kyaku"
+    type: "Special"
+    input: ["QCB", "/+", "K", "/(also air)"]
+    tag: "ex"
+
+  - name: " └ Shunpu Renkyaku"
+    type: "Special"
+    input: ["QCB", "/+", "K"]
+    note: After "Shunpu Kyaku".
+
+  - name: "Ouka Kyaku"
+    type: "Special"
+    input: ["QCF", "/+", "K", "/(in air)"]
+    tag: "ex"
+
+  - name: "Sakura Otoshi"
+    type: "Special"
+    input: ["DP", "/+", "K"]
+    tag: "ex"
+
+  - name: " └ Punch"
+    type: "Special"
+    input: ["P"]
+    note: After "Sakura Otoshi", up to 3 times.
+
+  - name: " └ Ouka Kyaku"
+    type: "Special"
+    input: ["D", "/+", "K"]
+    note: After "Sakura Otoshi".
+
+  - name: " └ Air Throw"
+    type: "Special"
+    input: ["B", "/or", "F", "/+", "2K"]
+    note: After "Sakura Otoshi".
+
+  - name: " └ Cancel"
+    type: "Special"
+    input: ["K"]
+    note: After "Sakura Otoshi".
+
+
+  - name: "Shinku Hadouken"
+    type: "Super"
+    input: ["QCF", "QCF", "/+", "P"]
+    tag: "max"
+
+  - name: "Shinku Tengyo Hadouken"
+    type: "Super"
+    input: ["QCB", "QCB", "/+", "P"]
+    tag: "max"
+
+  - name: "Haru Ichiban"
+    type: "Super"
+    input: ["QCB", "QCB", "/+", "K"]
+    tag: "max"
+  
+  - name: "Midare Zakura"
+    type: "Super"
+    input: ["QCF", "QCF", "/+", "K"]
+    tag: "max"
+
+  - name: "Transform"
+    type: "Super"
+    input: ["RDP", "/+", "S"]
+    note: Needs to be enabled in "config.txt".
+
+  - name: "Haru Ranman"
+    type: "Super"
+    input: ["QCB", "QCB", "/+", "3P"]
+    tag: "lv3"
+---
+
+{# O conteúdo específico da página (bio, história) vai aqui #}
+<p>{{ char_name }} é uma estudante que imita o estilo de luta de Ryu.</p>
+
+{% include "movelist.njk" %}
