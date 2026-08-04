@@ -406,6 +406,71 @@ footer {
 }
 
 /* ============================== */
+/* FAKE SPOTIFY EMBED */
+/* ============================== */
+.spotify-container {
+  background: #483878;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: min-content auto;
+}
+
+.spotify-container a {
+  text-shadow: none;
+  color: white;
+}
+
+.spotify-container img {
+  max-width: 125px;
+  max-height: 125px;
+  border-radius: 7px;
+  display: block;
+}
+
+.spotify-container img:hover {
+  filter: brightness(1.2);
+}
+
+.spotify-container i {
+  float: right;
+  margin-left: 10px;
+  font-size: 24pt;
+}
+
+.spotify-title {
+  font-size: 18pt;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.spotify-title:hover {
+  text-decoration: underline;
+}
+
+.spotify-follow {
+  font-size: 10.5pt;
+  font-weight: bold;
+  border: 1px solid #fff6;
+  border-radius: 3px;
+  padding: 2px 15px;
+  background: transparent;
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  transition: none;
+}
+
+.spotify-follow:hover {
+  background: #fff2;
+  transition: none;
+}
+
+/* ============================== */
 /* MUSIC PLAYER */
 /* ============================== */
 
