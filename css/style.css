@@ -417,6 +417,7 @@ footer {
   display: grid;
   gap: 12px;
   grid-template-columns: min-content auto;
+  margin-top: 6pt;
 }
 
 .spotify-container a {

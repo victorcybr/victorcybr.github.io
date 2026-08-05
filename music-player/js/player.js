@@ -140,7 +140,7 @@ function autoScrollText(element) {
 
     // Só anima se o texto for maior que o container
     if (textWidth > containerWidth) {
-      const distance = textWidth - containerWidth + 15; // 15px de margem no final
+      const distance = textWidth - containerWidth + 0; // 0px de margem no final
       const speed = distance / 45; // Define a velocidade (45px por segundo)
 
       // 4. Espera 2 segundos (2000ms) antes de começar a rolar
