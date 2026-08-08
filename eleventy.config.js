@@ -5,4 +5,5 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("music-player");
   eleventyConfig.addPassthroughCopy("favicon.png");
+  eleventyConfig.addPassthroughCopy("mugen/**/*.zip");
 };
