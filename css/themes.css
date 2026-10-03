@@ -420,3 +420,45 @@ html.rpg {
   line-height: 1.3;
   text-shadow: 1px 1px 0 black;
 }
+
+/* ============================== */
+/* TEMA CUTE
+/* ============================== */
+html.pink {
+  /* Fundo geral */
+  --bg-color: black;
+  --bg-image: url("/assets/bg/bg-black-2.png");
+  --bg-size: auto;
+  --bg-pos: auto;
+  --bg-repeat: repeat;
+
+  /* Texto */
+  --text-color: hsl(270, 0%, 90%);
+
+  /* Links */
+  --accent-color: hsl(330, 100%, 70%);
+  --accent-color-2: hsl(330, 100%, 80%);
+
+  /* Fonte */
+  --font-family: "Courier New";
+  --font-size: 11pt;
+
+  /* Caixas */
+  --div-border: 1px solid hsla(0, 0%, 30%);
+  --div-bg: hsla(0, 0%, 10%, 1);
+  --inner-bg: hsla(0, 0%, 20%, 1);
+
+  /* Estética */
+  --div-shadow: none;
+  --div-corner: 10px;
+
+  /* Espaçamento */
+  --div-padding: 15px;
+  --div-margin: 15px;
+
+  /* Transições */
+  --transition-time: 0;
+
+  /* Glow de link */
+  --link-glow: none;
+}

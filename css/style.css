@@ -409,7 +409,7 @@ footer {
 /* FAKE SPOTIFY EMBED */
 /* ============================== */
 .spotify-container {
-  background: #483878;
+  background-image: linear-gradient(hsl(255, 36%, 30%), hsl(255, 36%, 35%), hsl(255, 36%, 40%));
   border-radius: 10px;
   padding: 12px;
   font-family: Arial, Helvetica, sans-serif;
@@ -421,7 +421,7 @@ footer {
 }
 
 .spotify-container a {
-  text-shadow: none;
+  text-shadow: none !important;
   color: white;
 }
 
@@ -450,7 +450,7 @@ footer {
 }
 
 .spotify-title:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .spotify-follow {
