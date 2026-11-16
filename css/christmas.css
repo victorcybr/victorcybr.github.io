@@ -1,0 +1,143 @@
+/* ========================================
+   CHRISTMAS DECORATIONS
+   ======================================== */
+
+/* Os efeitos só aparecem no tema de Natal */
+
+html.christmas #christmas-snow {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 900;
+}
+
+/* Cordão de luzes */
+
+html.christmas .christmas-lights {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  pointer-events: none;
+  z-index: 901;
+}
+
+/* Fio que sustenta as lâmpadas */
+
+html.christmas .christmas-wire {
+  position: absolute;
+  top: 17px;
+  left: -2%;
+  width: 104%;
+  height: 0;
+  border-top: 2px solid #222;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+/* Soquete de cada lâmpada */
+
+html.christmas .christmas-bulb {
+  position: absolute;
+  width: 11px;
+  height: 16px;
+  border-radius: 50% 50% 45% 45%;
+
+  transform: translateX(-50%);
+
+  background: var(--bulb-off);
+  opacity: 0.75;
+
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+
+  animation: christmas-blink 2.4s ease-in-out infinite;
+  animation-delay: var(--blink-delay);
+
+}
+
+html.christmas .christmas-bulb::after {
+  content: "";
+
+  position: absolute;
+  inset: -3px;
+
+  border-radius: 50%;
+
+  /* Centro transparente, brilho nas bordas */
+  /*background: radial-gradient(
+    ellipse,
+    transparent 25%,
+    var(--bulb-glow) 65%,
+    transparent 100%
+  );*/
+  background: var(--bulb-glow);
+
+  filter: blur(4px);
+
+  opacity: 0;
+
+  mix-blend-mode: screen;
+
+  animation: christmas-glow 2.4s ease-in-out infinite;
+  animation-delay: var(--blink-delay);
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pequena base escura da lâmpada */
+
+html.christmas .christmas-bulb::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  top: -3px;
+  left: 3px;
+  background: #343434;
+  border-radius: 2px 2px 0 0;
+}
+
+@keyframes christmas-blink {
+
+  0%, 100% {
+    background: var(--bulb-on);
+    opacity: 1;
+  }
+
+  50% {
+    background: var(--bulb-off);
+    opacity: 0.9;
+  }
+
+}
+
+@keyframes christmas-glow {
+
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+}
+
+/* Respeita quem prefere animações reduzidas */
+
+@media (prefers-reduced-motion: reduce) {
+  html.christmas .christmas-bulb {
+    animation: none;
+  }
+}
+
+/* html.christmas .christmas-letter {
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+} */

@@ -1,6 +1,11 @@
 const themeSelect = document.getElementById("site-theme");
 const THEME_KEY = "site-theme";
 
+// A edição de Natal bloqueia temporariamente a troca de temas
+const isChristmas = document.documentElement.classList.contains("christmas");
+
+if (!isChristmas) {
+
 // 1. Atualiza visualmente o <select> com o tema que já foi carregado no <head>
 const currentTheme = localStorage.getItem(THEME_KEY) || "";
 themeSelect.value = currentTheme;
@@ -25,3 +30,5 @@ themeSelect.addEventListener("change", () => {
   // Salva a escolha para a próxima visita
   localStorage.setItem(THEME_KEY, selectedTheme);
 });
+
+}

@@ -472,3 +472,45 @@ html.pink {
   /* Glow de link */
   --link-glow: none;
 }
+
+/* ============================== */
+/* TEMA NATAL
+/* ============================== */
+html.christmas {
+  /* Fundo geral */
+  --bg-color: hsl(260, 100%, 85%);
+  --bg-image: linear-gradient(to bottom, hsl(240, 50%, 5%) 0%, hsl(250, 40%, 10%) 75%, hsl(260, 30%, 15%) 100%);
+  --bg-size: cover;
+  --bg-pos: center;
+  --bg-repeat: no-repeat;
+
+  /* Texto */
+  --text-color: #fff;
+
+  /* Links */
+  --accent-color: hsl(200, 50%, 50%);
+  --accent-color-2: hsl(50, 100%, 90%);
+
+  /* Fonte */
+  --font-family: Verdana, sans-serif;
+  --font-size: 11pt;
+
+  /* Caixas */
+  --div-border: 1px solid hsla(0, 100%, 100%, 0.5);
+  --div-bg: hsla(0, 0%, 0%, 0.5);
+  --inner-bg: hsla(0, 0%, 0%, 0.5);
+
+  /* Estética */
+  --div-shadow: none;
+  --div-corner: 10px;
+
+  /* Espaçamento */
+  --div-padding: 15px;
+  --div-margin: 15px;
+
+  /* Transições */
+  --transition-time: 0.3s;
+
+  /* Glow de link */
+  --link-glow: 0 0 5px hsl(45, 100%, 60%), 0 0 10px hsl(45, 100%, 60%);
+}

@@ -11,16 +11,26 @@
     <meta property="og:url" content="https://victorcybr.com/">
 
     <title>{{ title }} | VictorCYBR ✩</title>
+    
     <script>
-      (function() {
+    (function() {
+      var isChristmas = true;
+
+      if (isChristmas) {
+        document.documentElement.classList.add('christmas');
+      } else {
         var savedTheme = localStorage.getItem('site-theme');
+
         if (savedTheme) {
           document.documentElement.classList.add(savedTheme);
         }
-      })();
+      }
+    })();
     </script>
+
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/themes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/christmas.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@300;400;500;600;700&display=swap" />
@@ -60,7 +70,7 @@
             <noscript><img src="//counter1.fc2.com/counter_now.php?id=89514790"/></noscript>
           </section>
 
-          <section class="box center">
+          <!--section class="box center">
             <h4>Select Skin</h4>
             <hr>
             <select id="site-theme">
@@ -73,6 +83,14 @@
               <option value="cyber2">Cyberpunk 2</option>
               <option value="rpg">RPG</option>
               <option value="pink">Pink Goth</option>
+            </select>
+          </section -->
+
+          <section class="box center">
+            <h4>Select Skin</h4>
+            <hr>
+            <select id="site-theme" disabled>
+              <option value="christmas">Christmas 🎄</option>
             </select>
           </section>
         </aside>
@@ -150,6 +168,7 @@
     <script src="/js/myart.js"></script>
     <script src="/js/slider.js"></script>
     <script src="/js/theme-changer.js"></script>
+    <script src="/js/christmas.js"></script>
     <script src="/js/vhs-clock.js"></script>
   </body>
 </html>
