@@ -12,21 +12,43 @@
 
     <title>{{ title }} | VictorCYBR ✩</title>
     
-    <script>
+  <script>
     (function() {
+
+      // CONFIGURAÇÃO GERAL
+      // false = edição de Natal indisponível
       var isChristmas = true;
 
-      if (isChristmas) {
-        document.documentElement.classList.add('christmas');
-      } else {
-        var savedTheme = localStorage.getItem('site-theme');
+      var THEME_KEY = "site-theme";
+      var CHRISTMAS_KEY = "christmas-mode";
 
+      var savedTheme = localStorage.getItem(THEME_KEY) || "";
+
+      // Se não existir preferência salva, começa ON
+      var christmasMode = isChristmas &&
+        localStorage.getItem(CHRISTMAS_KEY) !== "off";
+
+      // Compartilha as configurações com os outros scripts
+      window.CHRISTMAS_AVAILABLE = isChristmas;
+      window.CHRISTMAS_MODE = christmasMode;
+
+      if (christmasMode) {
+
+        // ON: força o tema de Natal e ativa as decorações
+        document.documentElement.classList.add("christmas");
+        document.documentElement.classList.add("christmas-decorations");
+
+      } else {
+
+        // OFF: recupera o tema escolhido anteriormente
         if (savedTheme) {
           document.documentElement.classList.add(savedTheme);
         }
+
       }
+
     })();
-    </script>
+  </script>
 
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/themes.css" type="text/css" media="all" />
@@ -70,8 +92,12 @@
             <noscript><img src="//counter1.fc2.com/counter_now.php?id=89514790"/></noscript>
           </section>
 
-          <!--section class="box center">
+          <section class="box center">
             <h4>Select Skin</h4>
+            <hr>
+            <button id="christmas-toggle" type="button" hidden>
+              Christmas: ON
+            </button>
             <hr>
             <select id="site-theme">
               <option value="">Default</option>
@@ -83,14 +109,7 @@
               <option value="cyber2">Cyberpunk 2</option>
               <option value="rpg">RPG</option>
               <option value="pink">Pink Goth</option>
-            </select>
-          </section -->
-
-          <section class="box center">
-            <h4>Select Skin</h4>
-            <hr>
-            <select id="site-theme" disabled>
-              <option value="christmas">Christmas 🎄</option>
+              <option value="christmas">Christmas</option>
             </select>
           </section>
         </aside>

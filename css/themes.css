@@ -479,7 +479,7 @@ html.pink {
 html.christmas {
   /* Fundo geral */
   --bg-color: hsl(260, 100%, 85%);
-  --bg-image: linear-gradient(to bottom, hsl(240, 50%, 5%) 0%, hsl(250, 40%, 10%) 75%, hsl(260, 30%, 15%) 100%);
+  --bg-image: linear-gradient(to bottom, hsl(240, 50%, 5%) 0%, hsl(230, 50%, 10%) 75%, hsl(220, 50%, 15%) 100%);
   --bg-size: cover;
   --bg-pos: center;
   --bg-repeat: no-repeat;

@@ -2,8 +2,8 @@
 // CHRISTMAS DECORATIONS
 // ========================================
 
-// Só executa se o tema de Natal estiver ativo
-if (document.documentElement.classList.contains("christmas")) {
+// Só executa se as decorações de Natal estiverem ativadas
+if (document.documentElement.classList.contains("christmas-decorations")) {
 
   // ========================================
   // 1. LUZINHAS DE NATAL
@@ -20,24 +20,24 @@ if (document.documentElement.classList.contains("christmas")) {
   // Cores clássicas das luzes
   const bulbColors = [
     {
-      off: "#660000",
-      on: "#FFDDDD",
+      off: "#440000",
+      on: "#FFEEEE",
       glow: "#FF0000"
     },
     {
-      off: "#005500",
-      on: "#CCFFCC",
+      off: "#004400",
+      on: "#EEFFEE",
       glow: "#00DD00"
     },
     {
       off: "#002266",
-      on: "#AAFFFF",
+      on: "#DDFFFF",
       glow: "#0066FF"
     },
     {
-      off: "#664400",
-      on: "#FFEEAA",
-      glow: "#FFCC00"
+      off: "#552200",
+      on: "#FFFFDD",
+      glow: "#FFBB00"
     }
   ];
 
@@ -211,93 +211,5 @@ if (document.documentElement.classList.contains("christmas")) {
 
   // Começa a animação
   requestAnimationFrame(animateSnow);
-
-  // ========================================
-  // 3. LINKS COM LUZES DE NATAL
-  // ========================================
-
-  /* const linkColors = [
-    "#ff3333", // Vermelho
-    "#ffdd33", // Amarelo
-    "#33dd55", // Verde
-    "#3388ff"  // Azul
-  ];
-
-  // Seleciona todos os links da página
-  const links = document.querySelectorAll("a");
-
-  links.forEach(link => {
-
-    // Procura os textos dentro do link
-    const walker = document.createTreeWalker(
-      link,
-      NodeFilter.SHOW_TEXT
-    );
-
-    const textNodes = [];
-
-    // Guarda os textos antes de modificá-los
-    while (walker.nextNode()) {
-      if (walker.currentNode.textContent.trim() !== "") {
-        textNodes.push(walker.currentNode);
-      }
-    }
-
-    let letterIndex = 0;
-
-    // Transforma cada caractere em um pequeno elemento
-    textNodes.forEach(node => {
-
-      const fragment = document.createDocumentFragment();
-
-      for (const character of node.textContent) {
-
-        const letter = document.createElement("span");
-        letter.className = "christmas-letter";
-        letter.textContent = character;
-
-        fragment.appendChild(letter);
-      }
-
-      node.replaceWith(fragment);
-    });
-
-    // Aplica as cores quando o mouse entra no link
-    link.addEventListener("mouseenter", () => {
-
-      const letters = link.querySelectorAll(".christmas-letter");
-
-      letters.forEach(letter => {
-
-        // Espaços não precisam consumir uma cor
-        if (letter.textContent.trim() === "") return;
-
-        const color = linkColors[letterIndex % linkColors.length];
-
-        letter.style.color = color;
-
-        // Brilho individual da letra
-        letter.style.textShadow =
-          `0 0 4px ${color}, 0 0 9px ${color}`;
-
-        letterIndex++;
-      });
-
-    });
-
-    // Remove as cores especiais quando o mouse sai
-    link.addEventListener("mouseleave", () => {
-
-      const letters = link.querySelectorAll(".christmas-letter");
-
-      letters.forEach(letter => {
-        letter.style.color = "";
-        letter.style.textShadow = "";
-      });
-
-      letterIndex = 0;
-    });
-
-  }); */
 
 }

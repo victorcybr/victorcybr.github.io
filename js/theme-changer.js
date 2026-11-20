@@ -1,34 +1,86 @@
+// ========================================
+// THEME CHANGER + CHRISTMAS MODE
+// ========================================
+
 const themeSelect = document.getElementById("site-theme");
+const christmasButton = document.getElementById("christmas-toggle");
+
 const THEME_KEY = "site-theme";
+const CHRISTMAS_KEY = "christmas-mode";
 
-// A edição de Natal bloqueia temporariamente a troca de temas
-const isChristmas = document.documentElement.classList.contains("christmas");
+// Configurações recebidas do script no HEAD
+const isChristmasAvailable = window.CHRISTMAS_AVAILABLE;
+const christmasMode = window.CHRISTMAS_MODE;
 
-if (!isChristmas) {
 
-// 1. Atualiza visualmente o <select> com o tema que já foi carregado no <head>
+// ========================================
+// 1. BOTÃO DE NATAL
+// ========================================
+
+// Só mostra o botão durante a edição de Natal
+if (isChristmasAvailable) {
+
+  christmasButton.hidden = false;
+
+  // Atualiza o texto do botão
+  christmasButton.textContent = christmasMode
+    ? "Christmas: ON 🎄"
+    : "Christmas: OFF";
+
+  // Alterna entre ON e OFF
+  christmasButton.addEventListener("click", () => {
+
+    if (christmasMode) {
+      localStorage.setItem(CHRISTMAS_KEY, "off");
+    } else {
+      localStorage.setItem(CHRISTMAS_KEY, "on");
+    }
+
+    // Recarrega para ativar/desativar os efeitos corretamente
+    window.location.reload();
+
+  });
+
+}
+
+
+// ========================================
+// 2. THEME CHANGER
+// ========================================
+
+// Recupera o tema salvo
 const currentTheme = localStorage.getItem(THEME_KEY) || "";
-themeSelect.value = currentTheme;
 
-// 2. Quando o usuário escolher outro tema na lista
+// Atualiza visualmente o select
+themeSelect.value = christmasMode ? "christmas" : currentTheme;
+
+// ON: bloqueia o seletor
+// OFF: libera o seletor
+themeSelect.disabled = christmasMode;
+
+
+// ========================================
+// 3. ALTERAÇÃO DE TEMA
+// ========================================
+
 themeSelect.addEventListener("change", () => {
+
   const selectedTheme = themeSelect.value;
-  
-  // Pega todos os valores possíveis no select (ignorando o Default vazio)
+
+  // Pega todas as classes de tema disponíveis
   const allThemes = Array.from(themeSelect.options)
     .map(opt => opt.value)
     .filter(val => val !== "");
 
-  // Remove qualquer classe de tema que esteja no <html>
+  // Remove os temas anteriores
   document.documentElement.classList.remove(...allThemes);
 
-  // Se não for o default, adiciona a nova classe
+  // Aplica o novo tema
   if (selectedTheme) {
     document.documentElement.classList.add(selectedTheme);
   }
 
-  // Salva a escolha para a próxima visita
+  // Salva a escolha
   localStorage.setItem(THEME_KEY, selectedTheme);
-});
 
-}
+});

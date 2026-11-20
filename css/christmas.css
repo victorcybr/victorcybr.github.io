@@ -4,7 +4,7 @@
 
 /* Os efeitos só aparecem no tema de Natal */
 
-html.christmas #christmas-snow {
+html.christmas-decorations #christmas-snow {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -15,7 +15,7 @@ html.christmas #christmas-snow {
 
 /* Cordão de luzes */
 
-html.christmas .christmas-lights {
+html.christmas-decorations .christmas-lights {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@ html.christmas .christmas-lights {
 
 /* Fio que sustenta as lâmpadas */
 
-html.christmas .christmas-wire {
+html.christmas-decorations .christmas-wire {
   position: absolute;
   top: 17px;
   left: -2%;
@@ -39,11 +39,12 @@ html.christmas .christmas-wire {
 
 /* Soquete de cada lâmpada */
 
-html.christmas .christmas-bulb {
+html.christmas-decorations .christmas-bulb {
   position: absolute;
-  width: 11px;
-  height: 16px;
+  width: 8px;
+  height: 15px;
   border-radius: 50% 50% 45% 45%;
+  border: 1px solid #000;
 
   transform: translateX(-50%);
 
@@ -59,7 +60,7 @@ html.christmas .christmas-bulb {
 
 }
 
-html.christmas .christmas-bulb::after {
+html.christmas-decorations .christmas-bulb::after {
   content: "";
 
   position: absolute;
@@ -91,15 +92,15 @@ html.christmas .christmas-bulb::after {
 
 /* Pequena base escura da lâmpada */
 
-html.christmas .christmas-bulb::before {
+html.christmas-decorations .christmas-bulb::before {
   content: "";
   position: absolute;
   width: 5px;
   height: 4px;
   top: -3px;
-  left: 3px;
-  background: #343434;
-  border-radius: 2px 2px 0 0;
+  left: 2px;
+  background: #333;
+  border-radius: 0 0 0 0;
 }
 
 @keyframes christmas-blink {
@@ -131,13 +132,7 @@ html.christmas .christmas-bulb::before {
 /* Respeita quem prefere animações reduzidas */
 
 @media (prefers-reduced-motion: reduce) {
-  html.christmas .christmas-bulb {
+  html.christmas-decorations .christmas-bulb {
     animation: none;
   }
 }
-
-/* html.christmas .christmas-letter {
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
-} */
