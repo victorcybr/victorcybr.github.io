@@ -81,19 +81,26 @@ li {
 button {
   color: var(--text-color);
   background:
-    linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.1)),
+    linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.2)),
     var(--inner-bg);
   border: var(--div-border);
   font-size: var(--font-size);
   font-family: var(--font-family);
-  padding: 5px;
+  padding: 4px 10px;
   border-radius: var(--div-corner);
   cursor: pointer;
+  
+}
+
+button:hover {
+  background:
+    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.1)),
+    var(--inner-bg);
 }
 
 button:active {
     background:
-    linear-gradient(to top, rgba(255,255,255,0.1), rgba(0,0,0,0.1)),
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)),
     var(--inner-bg);
 }
 
@@ -402,7 +409,7 @@ footer {
 .news img {
   float: right;
   max-width: 160px;
-  max-height: 160px;
+  max-height: 120px;
   margin-left: 10px;
 }
 

@@ -24,7 +24,7 @@ if (isChristmasAvailable) {
 
   // Atualiza o texto do botão
   christmasButton.textContent = christmasMode
-    ? "Christmas: ON 🎄"
+    ? "Christmas: ON"
     : "Christmas: OFF";
 
   // Alterna entre ON e OFF

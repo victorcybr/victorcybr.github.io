@@ -156,10 +156,11 @@ html.aero .stages-inner-box {
   box-shadow: #fffd 0 0 1px 0.5px;
 }
 
+/* buggy...
 html.aero .box {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-}
+} */
 
 html.aero hr {
   border-top: #000c solid 1px;
@@ -181,7 +182,20 @@ html.aero button {
     hsla(210, 20%, 10%, 0.8);
   box-shadow:
     inset 0 0 2px hsl(210, 100%, 100%);
-  padding: 3px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+html.aero button:hover::before {
+  content: "";
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  background-color: #08f;
+  bottom: -50%;
+  border-radius: 50%;
+  filter: blur(10px);
+  mix-blend-mode: screen;
 }
 
 html.aero button:active {
@@ -289,7 +303,7 @@ html.cyber {
 
   /* Fonte */
   --font-family: "Rajdhani", Helvetica, sans-serif;
-  --font-size: 19px;
+  --font-size: 14pt;
 
   /* Caixas */
   --div-border: 1px solid hsl(1, 100%, 65%);
@@ -308,10 +322,10 @@ html.cyber {
   --transition-time: 0s;
 
   /* Glow de link */
-  --link-glow: hsl(0, 100%, 65%) 0 0 5px, hsl(0, 100%, 65%) 0 0 10px;
+  --link-glow: hsl(1, 100%, 65%) 0 0 5px, hsl(1, 100%, 65%) 0 0 10px;
 
-  font-weight: 600;
-  line-height: 1.1;
+  font-weight: 500;
+  line-height: 1;
 }
 
 html.cyber h1,
@@ -321,7 +335,7 @@ html.cyber h4,
 html.cyber h5,
 html.cyber h6 {
   color: white;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 html.cyber a,
@@ -330,16 +344,32 @@ html.cyber a:hover {
 }
 
 html.cyber hr {
-  border-top: 1px solid hsl(185, 100%, 70%);
+  border-top: 1px solid hsl(182, 80%, 55%);
 }
 
 html.cyber select {
   background: hsl(210, 50%, 6%);
-  font-weight: 600;
+  font-weight: 500;
 }
 
-html.cyber .nav-list li+li {
-  margin-top: 8px;
+html.cyber button {
+  color: var(--accent-color);
+  background: hsla(1, 100%, 65%, 0.2);
+  border: var(--div-border);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  padding: 4px 10px;
+  border-radius: var(--div-corner);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+html.cyber button:hover {
+  text-shadow: hsl(1, 100%, 65%) 0 0 5px, hsl(1, 100%, 65%) 0 0 10px;
+}
+
+html.cyber button:active {
+    background: hsla(1, 100%, 65%, 0);
 }
 
 /* ============================== */
